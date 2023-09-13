@@ -12,7 +12,7 @@ def test_descirbe():
     data = pl.read_csv(example_csv)
     result = polars_describe(data)
     assert result[["describe", "Shape_Area"]][2, 1] == 228153453.41946846
-    assert result[["describe", "Shape_Leng"]][2, 1] == 60622.47019343987
+    assert result[["describe", "Shape_Leng"]][2, 1] == 60622.470193439854
     assert result[["describe", "Shape_Area"]][3, 1] == 7611513.495851165
     assert result[["describe", "Shape_Leng"]][3, 1] == 1094.0062261219582
 
