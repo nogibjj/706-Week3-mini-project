@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import polars as pl
+import pandas as pd
 
 
 def polars_describe(polars_data):
