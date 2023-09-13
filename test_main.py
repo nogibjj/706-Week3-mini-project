@@ -21,8 +21,8 @@ def test_descirbe():
 
 def test_median():
     data = pl.read_csv(example_csv)
-    assert data['Shape_Leng'].median() == 60896.5746
-    assert data['Shape_Area'].median() == 230060526.252
+    assert get_median(data['Shape_Leng']) == 60896.5746
+    assert get_median(data['Shape_Area']) == 230060526.252
 
 def test_plot1():
     PlotShapeLeng(example_csv)
