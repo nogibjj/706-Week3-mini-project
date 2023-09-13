@@ -11,11 +11,11 @@ example_csv = "https://catalogue.data.wa.gov.au/dataset/f39087e2-2885-473e-bc62-
 def test_descirbe():
     data = pl.read_csv(example_csv)
     result = polars_describe(data)
-    assert result.loc['count', 'Shape_Leng'] == 1189.0
-    assert result.loc['mean', 'Shape_Area'] == 228153453.41946846
-    assert result.loc['mean', 'Shape_Leng'] == 60622.47019343987
-    assert result.loc['std', 'Shape_Area'] == 7611513.495851165
-    assert result.loc['std', 'Shape_Leng'] == 1094.0062261219582
+    assert result['count']['Shape_Leng'] == 1189.0
+    assert result['mean']['Shape_Area'] == 228153453.41946846
+    assert result['mean']['Shape_Leng'] == 60622.47019343987
+    assert result['std']['Shape_Area'] == 7611513.495851165
+    assert result['std']['Shape_Leng'] == 1094.0062261219582
 
 def test_median():
     data = pl.read_csv(example_csv)
