@@ -6,19 +6,19 @@ import polars as pl
 
 def polars_describe(csv):
     polars_data = pl.read_csv(csv)
-    return polars_df.describe()
+    return polars_data.describe()
 
 
 def get_median(csv):
     polars_data = pl.read_csv(csv)
-    return polars_df.median()
+    return polars_data.median()
 
 
 def PlotShapeLeng(csv):
     pd.set_option("display.max_columns", None)
     polars_data = pl.read_csv(csv)
     plt.figure(figsize=(10, 6))
-    plt.hist(general_df["Shape_Leng"], bins=20, edgecolor="black")
+    plt.hist(polars_data["Shape_Leng"], bins=20, edgecolor="black")
     plt.title("Shape_Leng Distribution")
     plt.xlabel("Shape_Leng")
     plt.ylabel("Count")
@@ -28,7 +28,7 @@ def PlotShapeArea(csv):
     pd.set_option("display.max_columns", None)
     polars_data = pl.read_csv(csv)
     plt.figure(figsize=(10, 6))
-    plt.hist(general_df["Shape_Area"], bins=20, edgecolor="black")
+    plt.hist(polars_data["Shape_Area"], bins=20, edgecolor="black")
     plt.title("Shape_Area Distribution")
     plt.xlabel("Shape_Area")
     plt.ylabel("Count")
