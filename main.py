@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-from ydata_profiling import ProfileReport
 import polars as pl
 
 
