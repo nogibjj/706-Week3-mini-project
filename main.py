@@ -1,4 +1,3 @@
-import pandas as pd
 import matplotlib.pyplot as plt
 from ydata_profiling import ProfileReport
 import polars as pl
@@ -31,8 +30,3 @@ def PlotShapeArea(csv):
     plt.xlabel("Shape_Area")
     plt.ylabel("Count")
     plt.show() 
-
-def polars_summary(csv):
-    polars_data = pl.scan_csv(csv)
-    profile = ProfileReport(polars_data, title="Profiling Report")
-    profile.to_file("polars.html")
