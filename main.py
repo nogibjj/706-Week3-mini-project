@@ -4,13 +4,11 @@ from ydata_profiling import ProfileReport
 import polars as pl
 
 
-def polars_describe(csv):
-    polars_data = pl.read_csv(csv)
+def polars_describe(polars_data):
     return polars_data.describe()
 
 
-def get_median(csv):
-    polars_data = pl.read_csv(csv)
+def get_median(polars_data):
     return polars_data.median()
 
 
